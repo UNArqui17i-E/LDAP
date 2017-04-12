@@ -1,12 +1,5 @@
-postclip\user\resource\AuthenticationResource.class
-postclip\user\service\TokenService.class
-postclip\user\model\Authentication.class
+postclip\user\resource\LdapCrudsResource.class
 postclip\user\model\User.class
 postclip\user\JAXRSConfiguration.class
-postclip\user\resource\LdapCrudsResource.class
-postclip\user\service\UserService.class
 postclip\user\resource\LdapResource.class
-postclip\user\service\HashService.class
-postclip\user\resource\UserResource.class
-postclip\user\service\AuthenticationService.class
 postclip\user\service\LdapService.class
