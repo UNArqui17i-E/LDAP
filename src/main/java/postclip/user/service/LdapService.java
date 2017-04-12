@@ -82,23 +82,20 @@ public class LdapService {
         String dn = "cn=" + user + ",ou=Postclip,dc=postclip,dc=com";
 
         FacesContext context = FacesContext.getCurrentInstance();
-        if (connect()) {
-            try{
-                System.out.println("Esta ingresando");
-                LDAPEntry usuario = Datos(user, name, "lastnameUser", user, password, user, "telephoneUser", "addressUser", "birthdateUser","typeUseridtypeuser");
-                lc.add(usuario);
-                lc.disconnect();
-                System.out.println( "Usuario ingresado correctamente..." );
-                return true;
-            } catch(LDAPException ex){
-                if (ex.getResultCode() == 68){
-                    System.err.println("ERROR: El Usuario ya se encuentra ingresado");
-                }
-                return false;
-            }
-        } else {
-            return false;
-        }
+          try{
+              System.out.println("Esta ingresando");
+              LDAPEntry usuario = Datos(user, name, "lastnameUser", user, password, user, "telephoneUser", "addressUser", "birthdateUser","typeUseridtypeuser");
+              lc.add(usuario);
+              lc.disconnect();
+              System.out.println( "Usuario ingresado correctamente..." );
+              return true;
+          } catch(LDAPException ex){
+              if (ex.getResultCode() == 68){
+                  System.err.println("ERROR: El Usuario ya se encuentra ingresado");
+              }
+              return false;
+          }
+
     }
 
     public LDAPEntry Datos(String idUser, String firstnameUser, String lastnameUser, String user, String passwordUser, String emailUser, String telephoneUser, String addressUser, String birthdateUser, String typeUseridtypeuser) {
