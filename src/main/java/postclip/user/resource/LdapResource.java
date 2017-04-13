@@ -24,11 +24,11 @@ public class LdapResource{
 
        if (login.login(user.getEmail(), user.getPassword())){
 
-        return "{ login: True } ";
+        return "{ \"login\": \"True\" } ";
 
       }else{
 
-        return "{ login: False } ";
+        return "{ \"login\": \"False\" } ";
 
       }
 
